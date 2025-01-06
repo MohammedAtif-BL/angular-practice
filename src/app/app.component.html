@@ -1,0 +1,40 @@
+<label>Text:</label>
+<input type="text" [(ngModel)]="inputValue" />
+<p>Value: {{ inputValue }}</p>
+
+<label>Number:</label>
+<input type="number" [(ngModel)]="numberValue" />
+<p>Value: {{ numberValue }}</p>
+
+<label>Password:</label>
+<input type="password" [(ngModel)]="passwordValue" />
+<p>Value: {{ passwordValue }}</p>
+
+<label>Email:</label>
+<input type="email" [(ngModel)]="emailValue" />
+<p>Value: {{ emailValue }}</p>
+
+<label>Date:</label>
+<input type="date" [(ngModel)]="dateValue" />
+<p>Value: {{ dateValue }}</p>
+
+<!-- Multiple Checkboxes -->
+<label>Options:</label>
+<div *ngFor="let option of checkboxOptions">
+  <input type="checkbox" (change)="onCheckboxChange($event, option)" />
+  {{ option }}
+</div>
+<p>Selected Options: {{ selectedCheckboxes }}</p>
+
+<label>Radio Button 1:</label>
+<input type="radio" [(ngModel)]="selectedOption" value="Radio Button 1" />
+<label>Radio Button 2:</label>
+<input type="radio" [(ngModel)]="selectedOption" value="Radio Button 2" />
+<p>Selected Radio: {{ selectedOption }}</p>
+
+<label>Range:</label>
+<input type="range" [(ngModel)]="rangeValue" />
+<p>Value: {{ rangeValue }}</p>
+
+<!-- Button to display all values -->
+<button (click)="displayValues()">Display Values</button>
