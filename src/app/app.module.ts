@@ -4,6 +4,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';  // added for the HttpClientModule
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +33,7 @@ import { RegisterComponent } from './pages/register/register.component';
     FormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
+    HttpClientModule,
      MatInputModule,
       MatButtonModule,
       MatCardModule,  // added for the card component
